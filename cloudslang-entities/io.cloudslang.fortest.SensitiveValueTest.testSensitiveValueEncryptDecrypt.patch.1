@@ -1,0 +1,32 @@
+STATUS: POLLUTER DOES NOT FIX
+MODIFIED: N/A
+MODIFIED FILE: N/A
+POLLUTER: io.cloudslang.lang.entities.encryption.EncryptorConfigTest.testEncryptionWithEncryptorImplementation
+POLLUTER FILE: /home/ecelrc/students/cli7/tool/automated_script/CloudSlang/cloud-slang/cloudslang-entities/src/test/java/io/cloudslang/lang/entities/encryption/EncryptorConfigTest.java
+ORIGINAL POLLUTER SIZE: 9
+NEW POLLUTER SIZE: 9
+ELAPSED TIME: 0.0
+==========================
+@@ -0,0 +0,22 @@
++ {
++     {
++     }
++     {
++         try {
++             Field field = EncryptionProvider.class.getDeclaredField("encryptor");
++             field.setAccessible(true);
++             field.set(null, new AtomicReference<>());
++         } catch (Throwable ex) {
++         } finally {
++         }
++     }
++     String text = "Str1";
++     Encryption encryptor = EncryptionProvider.get();
++     assertFalse(encryptor instanceof DummyEncryptor);
++     assertEquals(encryptor.encrypt(text.toCharArray()), "Encrypted");
++     assertTrue(Arrays.equals(encryptor.decrypt(text), "Decrypted".toCharArray()));
++     {
++     }
++     {
++     }
++ }

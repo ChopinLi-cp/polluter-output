@@ -1,0 +1,13 @@
+STATUS: INLINE SUCCESSFUL SETUPTEARDOWN
+MODIFIED: org.apache.shardingsphere.elasticjob.cloud.scheduler.mesos.AppConstraintEvaluatorTest.assertExistExecutorOnS0
+MODIFIED FILE: /home/ecelrc/students/cli7/tool/automated_script/apache/shardingsphere-elasticjob/elasticjob-cloud/elasticjob-cloud-scheduler/src/test/java/org/apache/shardingsphere/elasticjob/cloud/scheduler/mesos/AppConstraintEvaluatorTest.java
+POLLUTER: org.apache.shardingsphere.elasticjob.cloud.scheduler.mesos.AppConstraintEvaluatorTest.assertGetExecutorError
+POLLUTER FILE: /home/ecelrc/students/cli7/tool/automated_script/apache/shardingsphere-elasticjob/elasticjob-cloud/elasticjob-cloud-scheduler/src/test/java/org/apache/shardingsphere/elasticjob/cloud/scheduler/mesos/AppConstraintEvaluatorTest.java
+ORIGINAL POLLUTER SIZE: 7
+NEW POLLUTER SIZE: 1
+ELAPSED TIME: 59.73399996757507
+==========================
+@@ -107,0 +107,3 @@
++ {
++     when(facadeService.loadExecutorInfo()).thenThrow(JsonParseException.class);
++ }
