@@ -1,0 +1,1 @@
+{"time":{"startTime":1616914027388,"endTime":1616914027388,"elapsedSeconds":0.0},"status":"NOD","dependentTest":"hudson.remoting.PrefetchingTest.testGetResources","patchResults":[{"time":{"startTime":1616914027388,"endTime":1616914027388,"elapsedSeconds":0.0},"status":"NOD","dependentTest":"hudson.remoting.PrefetchingTest.testGetResources","polluter":"N/A","iterations":0}]}
